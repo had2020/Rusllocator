@@ -12,7 +12,7 @@ impl BitMapAllocator {
         self.bitmap = self.bitmap ^ (1 << addr);
 
         (addr * page_size) as *mut usize
-    }
+    } // used for arena allocators so I did not include dealloc
 }
 
 /*
